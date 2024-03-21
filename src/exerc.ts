@@ -50,8 +50,6 @@ function sendInMission(spaceships: { name: string, pilot: string, crew: string[]
   }
 }
 
-
-
 function firstMenuOption() {
   const name = prompt(`Qual o nome da nave a ser registrada ?`)
   const pilot = prompt(`Qual é o nome do pilot dá nave ${name} ?`)
@@ -110,7 +108,6 @@ function fourthMenuOption() {
       Tamanho maximo da tripulação: ${spaceships.crewLimit}
       Tripulantes: ${spaceships.crew.length}
     `
-
     spaceships.crew.forEach(member => {
       list += `   - ${member}\n`
     })
@@ -130,9 +127,7 @@ function fourthMenuOption() {
       4 - Listar naves registradas
       5 - Encerrar
     `
-
     userOption = Number(prompt(menu))
-
     switch (userOption) {
       case 1:
         firstMenuOption()
